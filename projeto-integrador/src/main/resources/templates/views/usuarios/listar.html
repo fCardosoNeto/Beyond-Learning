@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="modelo/template :: head">
+</head>
+<body>
+	<header th:replace="modelo/template :: header"></header>
+
+	<div class="container">
+		<h1 th:text="${titulo}"></h1>
+	</div>
+	<div class="container">
+		<table class="table caption-top">
+
+			<thead>
+				<tr>
+					<th scope="col">Id</th>
+					<th scope="col">Nome</th>
+					<th scope="col">CPF</th>
+					<th scope="col">Email</th>
+					<th scope="col">Nivel</th>
+					<th scope="col">Telefone</th>
+					<th scope="col">Cursos</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="us:${usuarios}">
+					<th scope="row" th:text="${us.id}"></th>
+					<td th:text="${us.nome}"></td>
+					<td th:text="${us.cpf}"></td>
+					<td th:text="${us.email}"></td>
+					<td th:text="${us.nivel}"></td>
+					<td th:text="${us.telefone}"></td>
+					<td th:text="${us.cursos}"></td>
+				
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+	<footer th:replace="modelo/template :: footer"></footer>
+</body>
+</html>
