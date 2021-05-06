@@ -2,14 +2,12 @@ package com.BeyondLearning.projetointegrador.models.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
 
 @Entity
 @Table(name = "usuarios")
@@ -20,16 +18,27 @@ public class Usuarios implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	
 	private Long id;
+	
+	@Column(name = "nome")
 	private String nome;
+	
+	@Column(name = "cpf")
 	private int cpf;
+	
+	@Column(name = "email")
 	private String email;
+	
+	
+	@Column(name = "nivel")
 	private int nivel;
+	
+	@Column(name = "telefone")
 	private String telefone;
 	
-	
-	
+		
 	public Long getId() {
 		return id;
 	}
@@ -100,32 +109,5 @@ public class Usuarios implements Serializable {
 		this.telefone = telefone;
 	}
 
-
-
-	public Cursos getCursos() {
-		return cursos;
-	}
-
-
-
-	public void setCursos(Cursos cursos) {
-		this.cursos = cursos;
-	}
-
-
-
-	@ManyToOne
-	@JoinColumn(name="id_cursos")
-	private Cursos cursos;
-
-
-
-	@Override
-	public String toString() {
-		return "Usuarios [id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", email=" + email + ", nivel=" + nivel
-				+ ", telefone=" + telefone + ", cursos=" + cursos + "]";
-	}
-	
-	
 	
 }

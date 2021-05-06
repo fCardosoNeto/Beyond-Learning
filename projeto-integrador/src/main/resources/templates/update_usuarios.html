@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Usuario Management System</title>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+</head>
+<body>
+	
+	<div class="container">
+		<h1>Usuario Management System</h1>
+		<hr>
+		<h2>Update</h2>
+
+		<form action="#" th:action="@{/saveUsuarios}" th:object="${usuarios}"
+			method="POST">
+			
+			<!-- Adiciona um campo invisível pra lidar com o update -->
+			<input type = "hidden" th:field="*{id}" />
+			
+			<input type="text" th:field="*{nome}"
+				class="form-control mb-4 col-5"> <input type="text"
+				th:field="*{cpf}" placeholder="CPF do Usuário"
+				class="form-control mb-4 col-5"> <input type="text"
+				th:field="*{email}" placeholder="Email do Usuário"
+				class="form-control mb-4 col-5"> <input type="text"
+				th:field="*{nivel}" placeholder="Nivel do Usuário"
+				class="form-control mb-4 col-5"> <input type="text"
+				th:field="*{telefone}" placeholder="Telefone do Usuário"
+				class="form-control mb-4 col-5">
+
+			<button type="submit" class="btn btn-info col-2">Salvar Dados</button>
+		</form>
+		
+		<hr>
+		
+		<a th:href="@{/}"> Back to Employee List</a>
+		
+	</div>
+	
+</body>
+</html>
