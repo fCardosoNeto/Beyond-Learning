@@ -24,19 +24,19 @@
 								Nome do Usuario</a>
 						</th>
 						<th>
-							<a th:href = "@{'/page/ + ${currentPage} + '?sortField=cpf&sortDir = ' + ${reverseSortDir}}">
+							<a th:href = "@{'/page/ + ${currentPage}}">
 								CPF do Usuario</a>
 						</th>
 						<th>
-							<a th:href = "@{'/page/ + ${currentPage} + '?sortField=email&sortDir = ' + ${reverseSortDir}}">
+							<a th:href = "@{'/page/ + ${currentPage}}">
 								Email do Usuario</a>
 						</th>
 						<th>
-							<a th:href = "@{'/page/ + ${currentPage} + '?sortField=nivel&sortDir = ' + ${reverseSortDir}}">
+							<a th:href = "@{'/page/ + ${currentPage}}">
 								Nivel do Usuario</a>
 						</th>
 						<th>
-							<a th:href = "@{'/page/ + ${currentPage} + '?sortField=telefone&sortDir = ' + ${reverseSortDir}}">
+							<a th:href = "@{'/page/ + ${currentPage}}">
 								Telefone do Usuario</a>
 						</th>
 						<th>Ações</th>
@@ -65,17 +65,17 @@
 				</div>
 				<div class = "col-sm-1">
 					<span th:each = "i: ${#numbers.sequence(1, totalPages)}">
-						<a th:if = "${currentPage != i}" th:href = "@{'/page/' + ${i}} + '?sortField' + ${sortField} + '&sortDir' + ${sortDir}}">[[${i}]]</a>
+						<a th:if = "${currentPage != i}" th:href = "@{'/page/' + ${i}}">[[${i}]]</a>
 						<span th:unless = "${currentPage != i}">[[${i}]]</span> 	&nbsp; &nbsp;	
 					</span>
 				</div>
 				<div class = "col-sm-1">
-						<a th:if = "${currentPage < totalPages}" th:href = "@{'/page/' + ${currentPage + 1}} + ${i}} + '?sortField' + ${sortField} + '&sortDir' + ${sortDir}}">Next</a>
+						<a th:if = "${currentPage < totalPages}" th:href = "@{'/page/' + ${currentPage + 1}}">Next</a>
 						<span th:unless = "${currentPage < totalPages}">Next</span>
 				</div>
 				
 				<div class = "col-sm-1">
-						<a th:if = "${currentPage < totalPages}" th:href = "@{'/page/' + ${currentPage + 1}} + ${i}} + '?sortField' + ${sortField} + '&sortDir' + ${sortDir}}">Last</a>
+						<a th:if = "${currentPage < totalPages}" th:href = "@{'/page/' + ${currentPage + 1}}">Last</a>
 						<span th:unless = "${currentPage < totalPages}">Last</span>
 				</div>
 			

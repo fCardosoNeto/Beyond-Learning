@@ -12,6 +12,6 @@ public interface IUsuariosService {
 	void saveUsuarios(Usuarios usuarios);
 	Usuarios getUsuariosById(long id);
 	void deleteUsuariosById(long id);
-	Page<Usuarios> findPaginated(int pageNo, int pageSize, String sortField, String sortDirection);
+	Page<Usuarios> findPaginated(int pageNo, int pageSize);
 	
 }
