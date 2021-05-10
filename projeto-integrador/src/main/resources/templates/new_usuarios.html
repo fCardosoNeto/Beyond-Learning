@@ -10,26 +10,19 @@
 	crossorigin="anonymous">
 </head>
 <body>
+<center>
 	<div class="container">
 		<h1>Usuario Management System</h1>
 		<hr>
-		<h2>Salvar</h2>
-
-		<form action="#" th:action="@{/saveUsuarios}" th:object="${usuarios}"
-			method="POST">
-			<input type="text" th:field="*{nome}" placeholder="Nome do Usuário"
-				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{cpf}" placeholder="CPF do Usuário"
-				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{email}" placeholder="Email do Usuário"
-				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{nivel}" placeholder="Nivel do Usuário"
-				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{telefone}" placeholder="Telefone do Usuário"
-				class="form-control mb-4 col-5">
-
+		<form action="#" th:action="@{/saveUsuarios}" th:object="${usuarios}" method="POST">
+			<input type="text" th:field="*{nome}" placeholder="Nome do Usuário" class="form-control mb-4 col-5">
+			<input type="text" th:field="*{cpf}" placeholder="CPF XXX.XXX.XXX-XX" class="form-control mb-4 col-5"> 
+			<input type="text" th:field="*{email}" placeholder="user@email.com" class="form-control mb-4 col-5"> 
+			<input type="text" th:field="*{nivel}" placeholder="Nivel do Usuário" class="form-control mb-4 col-5"> 
+			<input type="text" th:field="*{telefone}" placeholder="(99) 99999-9999" class="form-control mb-4 col-5">
 			<button type="submit" class="btn btn-info col-2">Salvar</button>
 		</form>
 	</div>
+</center>
 </body>
 </html>
