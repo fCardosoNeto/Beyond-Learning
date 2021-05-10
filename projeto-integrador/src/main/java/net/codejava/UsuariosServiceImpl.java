@@ -1,4 +1,4 @@
-package com.BeyondLearning.projetointegrador.models.service;
+package net.codejava;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,31 +9,31 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.BeyondLearning.projetointegrador.models.entity.Usuarios;
-import com.BeyondLearning.projetointegrador.models.repository.UsuariosRepository;
+import net.codejava.User;
+import net.codejava.UserRepository;
 
 @Service
-public class UsuariosServiceImpl implements IUsuariosService{
+public class UsuariosServiceImpl implements UsuarioService{
 
 	
 	@Autowired
-	private UsuariosRepository usuariosRepository;
+	private UserRepository usuariosRepository;
 	
 	@Override
-	public List<Usuarios> getAllUsuarios() {
+	public List<User> getAllUsuarios() {
 		return usuariosRepository.findAll();
 	}
 
 	@Override
-	public void saveUsuarios(Usuarios usuarios) {
+	public void saveUsuarios(User usuarios) {
 		this.usuariosRepository.save(usuarios);
 		
 	}
 
 	@Override
-	public Usuarios getUsuariosById(long id) {
-		Optional<Usuarios> optional = usuariosRepository.findById(id);
-		Usuarios usuarios = null;
+	public User getUsuariosById(long id) {
+		Optional<User> optional = usuariosRepository.findById(id);
+		User usuarios = null;
 		if(optional.isPresent()) {
 			usuarios = optional.get();
 		}else {
@@ -50,7 +50,7 @@ public class UsuariosServiceImpl implements IUsuariosService{
 	}
 
 	@Override
-	public Page<Usuarios> findPaginated(int pageNo, int pageSize) {
+	public Page<User> findPaginated(int pageNo, int pageSize) {
 		
 		
 		Pageable pageable = PageRequest.of(pageNo - 1, pageSize);

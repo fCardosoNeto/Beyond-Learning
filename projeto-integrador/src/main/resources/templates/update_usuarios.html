@@ -23,15 +23,14 @@
 			<!-- Adiciona um campo invisível pra lidar com o update -->
 			<input type = "hidden" th:field="*{id}" />
 			
-			<input type="text" th:field="*{nome}"
+			<input type="text"
+				th:field="*{email}" placeholder="email"
 				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{cpf}" placeholder="CPF do Usuário"
+				th:field="*{password}" placeholder="senha"
 				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{email}" placeholder="Email do Usuário"
+				th:field="*{firstName}" placeholder="nome"
 				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{nivel}" placeholder="Nivel do Usuário"
-				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{telefone}" placeholder="Telefone do Usuário"
+				th:field="*{lastName}" placeholder="sobrenome"
 				class="form-control mb-4 col-5">
 
 			<button type="submit" class="btn btn-info col-2">Salvar Dados</button>
@@ -39,7 +38,7 @@
 		
 		<hr>
 		
-		<a th:href="@{/}"> Back to Employee List</a>
+		<a th:href="@{/users}"> Back </a>
 		
 	</div>
 	
