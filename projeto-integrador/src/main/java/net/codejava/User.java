@@ -27,7 +27,12 @@ public class User {
 	@Column(name = "last_name", nullable = false, length = 20)
 	private String lastName;
 	
-
+	@Column(name = "cpf", nullable = false, length = 12)
+	private double cpf;
+	
+	@Column(name = "telefone", nullable = false, length = 20)
+	private String telefone;
+	
 	public Long getId() {
 		return id;
 	}
@@ -68,6 +73,20 @@ public class User {
 		this.lastName = lastName;
 	}
 	
+	public double getCpf() {
+		return cpf;
+	}
 	
+	public void setCpf(Double cpf) {
+		this.cpf = cpf;
+	}
+	
+	public String getTelefone() {
+		return telefone;
+	}
+	
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
 	
 }

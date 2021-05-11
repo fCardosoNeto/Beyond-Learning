@@ -42,8 +42,22 @@
 				<label class="col-4 col-form-label">Last Name: </label>
 				<div class="col-8">
 					<input type="text" th:field="*{lastName}" class="form-control" 
-							required minlength="2" maxlength="20" />
+							required minlength="4" maxlength="20" />
 				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label">CPF: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{cpf}" class="form-control" 
+							required minlength="11" maxlength="11"/>
+				</div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label">Telefone: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{telefone}" class="form-control" 
+							required minlength="10" maxlength="20"/>
+				</div>
+			</div>
 			</div>
 			
 			<div>

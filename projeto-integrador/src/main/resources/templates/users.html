@@ -30,6 +30,8 @@
 					<th>E-mail</th>
 					<th>First Name</th>
 					<th>Last Name</th>
+					<th>CPF</th>
+					<th>Telefone</th>
 					<th>Actions</th>
 				</tr>
 			</thead>
@@ -39,6 +41,8 @@
 					<td th:text="${user.email}">E-mail</td>
 					<td th:text="${user.firstName}">First Name</td>
 					<td th:text="${user.lastName}">Last Name</td>
+					<td th:text="${user.cpf}">CPF</td>
+					<td th:text="${user.telefone}">Telefone</td>
 					<td><a th:href="@{/showFormForUpdate/{id}(id=${user.id})}" class="btn btn-primary">Update</a>
 						<a th:href="@{/deleteUsuarios/{id}(id=${user.id})}" class="btn btn-danger">Delete</a></td>
 				</tr>
