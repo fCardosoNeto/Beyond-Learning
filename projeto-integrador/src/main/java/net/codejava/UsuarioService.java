@@ -4,8 +4,6 @@ import java.util.List;
 
 import org.springframework.data.domain.Page;
 
-import net.codejava.*;
-
 public interface UsuarioService {
 
 	public List<User> getAllUsuarios();
