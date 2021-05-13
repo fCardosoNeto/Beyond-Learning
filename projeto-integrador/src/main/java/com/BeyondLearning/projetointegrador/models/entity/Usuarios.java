@@ -26,7 +26,7 @@ public class Usuarios implements Serializable {
 	private String nome;
 	
 	@Column(name = "cpf")
-	private int cpf;
+	private String cpf;
 	
 	@Column(name = "email")
 	private String email;
@@ -63,13 +63,13 @@ public class Usuarios implements Serializable {
 
 
 
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
 
 
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 
