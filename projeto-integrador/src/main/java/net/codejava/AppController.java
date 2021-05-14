@@ -20,6 +20,27 @@ public class AppController {
 	@Autowired
 	private UserRepository userRepo;
 
+	@GetMapping("/login1")
+	public String viewLoginPage() {
+		return "login";
+	}
+	
+	@GetMapping("/cursos")
+	public String viewCursosPage() {
+		return "cursos";
+	}
+	
+	@GetMapping("/addCurso")
+	public String showAddCurso(Model model) {
+		model.addAttribute("user", new User());
+		return "add_curso";
+	}
+	
+	@GetMapping("/cursosAdm")
+	public String viewCursosAdmPage() {
+		return "cursos_adm";
+	}
+	
 	@GetMapping("")
 	public String viewHomePage() {
 		return "index";

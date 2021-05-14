@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Usuario Management System</title>
+
+<link rel="stylesheet" 
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+</head>
+<body>
+	
+	<div class="container">
+		<h1>Curso Management System</h1>
+		<hr>
+		<h2>Add Curso</h2>
+
+		<form action="#" th:action="@{/saveUsuarios}" th:object="${user}"
+			method="POST">
+			
+			<!-- Adiciona um campo invisível pra lidar com o update -->
+			<input type ="hidden" th:field="*{id}" />
+			<input type ="hidden" th:field="*{firstName}" />
+			<input type ="hidden" th:field="*{lastName}" />
+			<input type ="hidden" th:field="*{cpf}" />
+			<input type ="hidden" th:field="*{telefone}" />
+			<input type ="hidden" th:field="*{password}" />
+			<input type ="hidden" th:field="*{email}" />
+			<input type="text" th:field="*{cursos}" placeholder="Curso" class="form-control mb-4 col-5"> 
+			<input type="text" th:field="*{descricao}" placeholder="Descricao" class="form-control mb-4 col-5"> 
+			<button type="submit" class="btn btn-info col-2">Salvar Dados</button>
+		</form>	
+			
+		<hr>
+				
+		<a th:href="@{/cursosAdm}"> Back </a>
+		
+	</div>
+	
+</body>
+</html>

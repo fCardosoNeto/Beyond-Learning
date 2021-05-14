@@ -22,23 +22,14 @@
 			
 			<!-- Adiciona um campo invisível pra lidar com o update -->
 			<input type = "hidden" th:field="*{id}" />
-			
-			<input type="text"
-				th:field="*{email}" placeholder="email"
-				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{password}" placeholder="senha"
-				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{firstName}" placeholder="nome"
-				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{lastName}" placeholder="sobrenome"
-				class="form-control mb-4 col-5">
-			<input type="text"
-				th:field="*{cpf}" placeholder="CPF"
-				class="form-control mb-4 col-5">
-			<input type="text"
-				th:field="*{telefone}" placeholder="telefone"
-				class="form-control mb-4 col-5">
-
+			<input type ="hidden" th:field="*{descricao}" />
+			<input type ="hidden" th:field="*{cursos}" />
+			<input type="text" th:field="*{email}" placeholder="email" class="form-control mb-4 col-5"> 
+			<input type="text" th:field="*{password}" placeholder="senha" class="form-control mb-4 col-5"> 
+			<input type="text" th:field="*{firstName}" placeholder="nome" class="form-control mb-4 col-5"> 
+			<input type="text" th:field="*{lastName}" placeholder="sobrenome" class="form-control mb-4 col-5">
+			<input type="text" th:field="*{cpf}" placeholder="CPF" class="form-control mb-4 col-5">
+			<input type="text" th:field="*{telefone}" placeholder="telefone" class="form-control mb-4 col-5">
 			<button type="submit" class="btn btn-info col-2">Salvar Dados</button>
 		</form>
 		

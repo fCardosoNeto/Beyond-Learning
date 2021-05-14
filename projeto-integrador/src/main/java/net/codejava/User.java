@@ -33,6 +33,12 @@ public class User {
 	@Column(name = "telefone", nullable = false, length = 20)
 	private String telefone;
 	
+	@Column(name = "cursos", nullable = false, length = 50)
+    private String cursos; 
+
+	@Column(name = "descricao", nullable = false, length = 50)
+    private String descricao;
+	
 	public Long getId() {
 		return id;
 	}
@@ -88,5 +94,23 @@ public class User {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
+	
+	public String getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(String cursos) {
+        this.cursos = cursos;
+
+    }
+    
+    public String getDescricao() {
+        return cursos;
+    }
+
+    public void setDescricao(String Descricao) {
+        this.descricao = Descricao;
+
+    }
 	
 }
