@@ -1,9 +1,5 @@
 # IMAGEM PARA POR DO PROJETO 
 
-# Índice 
-- [Objetivo](#Objetivo)
-- [Integrantes do Grupo](#integrantes do grupo)
-
 # Índice
 - [Objetivo](#objetivo)  
 - [Integrantes do Grupo](#integrantes-do-projeto)  
