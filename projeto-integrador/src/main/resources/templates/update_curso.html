@@ -13,38 +13,31 @@
 <body>
 	
 	<div class="container">
-		<h1>Usuario Management System</h1>
+		<h1>Curso Management System</h1>
 		<hr>
 		<h2>Update</h2>
 
-		<form action="#" th:action="@{/saveUsuarios}" th:object="${user}"
+		<form action="#" th:action="@{/saveCurso}" th:object="${curso}"
 			method="POST">
 			
 			<!-- Adiciona um campo invisível pra lidar com o update -->
 			<input type = "hidden" th:field="*{id}" />
 			
 			<input type="text"
-				th:field="*{email}" placeholder="email"
+				th:field="*{categoria}" placeholder="Categoria do Curso"
 				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{password}" placeholder="senha"
+				th:field="*{descricao}" placeholder="Descrição do Curso"
 				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{firstName}" placeholder="nome"
-				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{lastName}" placeholder="sobrenome"
+				th:field="*{nomecurso}" placeholder="Nome do Curso"
 				class="form-control mb-4 col-5">
-			<input type="text"
-				th:field="*{cpf}" placeholder="CPF"
-				class="form-control mb-4 col-5">
-			<input type="text"
-				th:field="*{telefone}" placeholder="telefone"
-				class="form-control mb-4 col-5">
+
 
 			<button type="submit" class="btn btn-info col-2">Salvar Dados</button>
 		</form>
 		
 		<hr>
 		
-		<a th:href="@{/users}"> Back </a>
+		<a th:href="@{/cursos}"> Voltar </a>
 		
 	</div>
 	
