@@ -1,4 +1,6 @@
-# IMAGEM PARA POR DO PROJETO 
+<p align="center">
+  <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Beyond%20Learning%20logo.gif" width="350px" height="350px"p>
+
 
 # Índice
 - [Objetivo](#objetivo)  
