@@ -29,4 +29,4 @@ Desenvolver uma plataforma web voltada ao ensino á distância para a gestão e 
 # Sprint Cards
 
 <p align="center">
-  <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Card/Cards_API.png" width="700px"p>
+  <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Card/Cards_API.png" width="100%"p>
