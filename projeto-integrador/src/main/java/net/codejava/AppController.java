@@ -1,10 +1,6 @@
-package net.codejava.user.controller;
+package net.codejava;
 
 import java.util.List;
-
-import net.codejava.user.entities.User;
-import net.codejava.user.repository.UserRepository;
-import net.codejava.user.service.UsuarioService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -17,7 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class AppController {
-	
+
+	@Autowired
 	private UsuarioService usuariosService;
 
 	@Autowired
@@ -27,11 +24,6 @@ public class AppController {
 	public String viewHomePage() {
 		return "index";
 	}
-	
-	@GetMapping("/login")
-	public String viewLoginPage() {
-		return "login";
-	}
 
 	@GetMapping("/register")
 	public String showRegistrationForm(Model model) {
@@ -39,7 +31,7 @@ public class AppController {
 
 		return "signup_form";
 	}
-	
+
 	@PostMapping("/process_register")
 	public String processRegister(User user) {
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
@@ -72,8 +64,7 @@ public class AppController {
 		usuariosService.saveUsuarios(usuarios);
 		return "index";
 	}
-	
-	
+
 	@GetMapping("/showFormForUpdate/{id}")
 	public String showFormForUpdate(@PathVariable(value = "id") long id, Model model) {
 
