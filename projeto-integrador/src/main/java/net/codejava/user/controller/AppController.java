@@ -1,6 +1,10 @@
-package net.codejava;
+package net.codejava.user.controller;
 
 import java.util.List;
+
+import net.codejava.user.entities.User;
+import net.codejava.user.repository.UserRepository;
+import net.codejava.user.service.UsuarioService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -15,7 +19,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class AppController {
 
 	@Autowired
-	private UsuarioService usuariosService;
+	private UserRepository usuariosService;
 
 	@Autowired
 	private UserRepository userRepo;
@@ -24,6 +28,11 @@ public class AppController {
 	public String viewHomePage() {
 		return "index";
 	}
+	
+	@GetMapping("/login")
+	public String viewLoginPage() {
+		return "login";
+	}
 
 	@GetMapping("/register")
 	public String showRegistrationForm(Model model) {
@@ -31,7 +40,7 @@ public class AppController {
 
 		return "signup_form";
 	}
-
+	
 	@PostMapping("/process_register")
 	public String processRegister(User user) {
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
@@ -61,15 +70,16 @@ public class AppController {
 	@PostMapping("/saveUsuarios")
 	public String saveUsuarios(@ModelAttribute("usuarios") User usuarios) {
 		// salva o usuario no banco
-		usuariosService.saveUsuarios(usuarios);
+		usuariosService.save(usuarios);
 		return "index";
 	}
-
+	
+	
 	@GetMapping("/showFormForUpdate/{id}")
 	public String showFormForUpdate(@PathVariable(value = "id") long id, Model model) {
 
 		// pega o usuário do bd
-		User usuarios = usuariosService.getUsuariosById(id);
+		User usuarios = usuariosService.getOne(id);
 
 		// set user as a model attribute to pre-populate the form
 		model.addAttribute("usuarios", usuarios);
@@ -80,7 +90,7 @@ public class AppController {
 	public String deleteUsuarios(@PathVariable(value = "id") long id) {
 
 		// chama o método de deletar usuário
-		this.usuariosService.deleteUsuariosById(id);
+		this.usuariosService.deleteById(id);
 		return "index";
 
 	}

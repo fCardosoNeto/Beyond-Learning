@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html xmlns:th="https://www.thymeleaf.org"> <!--mensagem de aviso-->
+<head>
+	<meta charset="UTF-8">
+	<title>Área de Upload</title> <!--título pagina--> 
+	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>  <!--código do bootstrap-->
+</head>
+<body>
+					 <!-- ATUALIZAR O CSS PARA A VERSÃO MAIS RECENTE -->
+	<div class="container-fluid text-center"> <!-- para centralizar o texto -->
+		<div>
+			<h1>Área de Upload</h1><!--primeiro titulo que aparece(css)-->
+		</div>
+		
+		<div class="text-success"> <!-- para formatar a cor do texto -->
+			<h3> [[${message}]]</h3>	<!-- mensagem de aviso, puxa a variavel de aviso  -->
+		</div>
+		
+		<div class="row border rounded m-3 p-3">
+			<th:block th:each="doc : ${listDocs}">  <!-- para mostrar os aquivos na tela --> 
+				<div class="col"> 
+					<div>   
+						<img th:src="@{/images/icone-documentos.png}" width="50"/>
+					</div>
+					<div>
+						<a th:href="@{'/download?id=' +${doc.id}}">[[${doc.name}]]</a> <!-- informações do nome, tamanho, icon -->
+					</div>
+					<div>
+						([[${#numbers.formatInteger(doc.size, 4, 'COMMA')}]] bytes)
+					</div>
+				</div>
+			</th:block>
+		</div>
+		     
+	<form th:action="@{/upload}" method="POST" 
+		enctype="multipart/form-data"
+		style="max-width: 600px; margin: 0 auto" 
+		>	<!-- especificar o tamanho da borda -->
+		
+		<div class="border rounded m-3"> <!-- para adicionar uma borda no upload your files-->
+			<h2>Envie seus arquivos:</h2>
+			<p>
+				<input type="file" name="document" required /> <!-- botão para pegar arquivo -->
+			</p>
+			<p>
+				<input type="submit" value="Upload" class="btn btn-primary" /> <!-- botão para dar upload -->
+			</p>
+		</div>
+	</form>
+	</div>
+</body>
+</html>
