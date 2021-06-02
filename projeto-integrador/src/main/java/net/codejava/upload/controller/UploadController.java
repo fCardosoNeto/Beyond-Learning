@@ -31,11 +31,11 @@ public class UploadController {
 		@Autowired
 		private DocumentRepository repo;
 		
-		@GetMapping("/")
+		@GetMapping("/upload")
 		public String viewHomePage(Model model) {
 			List<Document> listDocs = repo.findAll(); // para mostrar os arquivos na tela
 			model.addAttribute("listDocs", listDocs);
-			return "home"; // direcionar para a pagina home 
+			return "upload"; // direcionar para a pagina home 
 		}
 		
 		@PostMapping("/upload")
@@ -53,7 +53,7 @@ public class UploadController {
 			
 			ra.addFlashAttribute("message", "O arquivo foi upado com sucesso!");
 			
-			return "redirect:/";
+			return "redirect:/upload";
 			
 		} 
 		

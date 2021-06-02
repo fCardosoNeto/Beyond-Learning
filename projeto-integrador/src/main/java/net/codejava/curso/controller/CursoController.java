@@ -4,18 +4,14 @@ import java.util.List;
 
 import net.codejava.curso.entities.Curso;
 import net.codejava.curso.repository.CursoRepository;
-import net.codejava.curso.service.CursoService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class CursoController {
@@ -52,7 +48,7 @@ public class CursoController {
 	public String saveCurso(@ModelAttribute("cursos") Curso cursos) {
 		// salva o curso no banco
 		cursoRepository.save(cursos);
-		return "index";
+		return "redirect:/cursos";
 	}
 
 	@GetMapping("/showCursoForUpdate/{id}")
@@ -74,5 +70,15 @@ public class CursoController {
 		return "index";
 
 	}
+	
+	// não remover, precisei mapear o catálogo de cursos, sem esse @getmapping /menu_cursos ele não "encontra" a html
+	@GetMapping("/menu_cursos")
+	public String listCurso1(Model model) {
+		List<Curso> listCurso = cursoRepository.findAll();
+		model.addAttribute("listCurso", listCurso);
+
+		return "menu_cursos";
+	}
+	
 
 }
