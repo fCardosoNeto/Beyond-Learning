@@ -10,11 +10,9 @@
 <body>
 <div class="container text-center">
 	<div>
-		<form th:action="@{/logout}" method="post">
-
-			<a th:href = "@{/showNewCursoForm}" class = "btn btn-primary btn-sm mb-3"> Adicionar Curso </a>
-			<input type="submit" class = "btn btn-primary btn-sm mb-3" value="Sign Out" />
-		</form>
+		<a th:href = "@{/showNewCursoForm}" class = "btn btn-primary btn-sm mb-3"> Adicionar Curso </a>
+		<a th:href = "@{/}" class = "btn btn-primary btn-sm mb-3"> Voltar </a>
+		<a th:href = "@{/logout}" class = "btn btn-primary btn-sm mb-3"> Fazer logout </a>
 	</div>
 	<div>
 		<h1>Lista dos Cursos</h1>

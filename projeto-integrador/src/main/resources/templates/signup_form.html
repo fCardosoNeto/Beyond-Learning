@@ -12,7 +12,7 @@
 <body>
 	<div class="container text-center">
 		<div>
-			<h1>User Registration - Sign Up</h1>
+			<h1>Cadastre-se</h1>
 		</div>
 		<form th:action="@{/process_register}" th:object="${user}"
 			method="post" style="max-width: 600px; margin: 0 auto;">
@@ -26,7 +26,7 @@
 				</div>
 
 				<div class="form-group row">
-					<label class="col-4 col-form-label">Password: </label>
+					<label class="col-4 col-form-label">Senha: </label>
 					<div class="col-8">
 						<input type="password" th:field="*{password}" placeholder="Senha"
 							class="form-control" required minlength="6" maxlength="10" />
@@ -34,7 +34,7 @@
 				</div>
 
 				<div class="form-group row">
-					<label class="col-4 col-form-label">First Name: </label>
+					<label class="col-4 col-form-label">Primeiro nome: </label>
 					<div class="col-8">
 						<input type="text" th:field="*{firstName}"
 							placeholder="Primeiro nome" class="form-control" required
@@ -43,7 +43,7 @@
 				</div>
 
 				<div class="form-group row">
-					<label class="col-4 col-form-label">Last Name: </label>
+					<label class="col-4 col-form-label">Sobrenome: </label>
 					<div class="col-8">
 						<input type="text" th:field="*{lastName}"
 							placeholder="Ultimo nome" class="form-control" required
@@ -66,12 +66,10 @@
 							class="form-control" required minlength="10" maxlength="20" />
 					</div>
 				</div>
-				<button type="submit" class="btn btn-primary">Sign Up</button>
+				<button type="submit" class="btn btn-primary">Registrar</button>
+				<a th:href="@{/}" class="btn btn-primary"> Voltar </a>
 			</div>
 			</form>
 	</div>
-	
-	<a th:href="@{/}"> Back </a>
-	
 </body>
 </html>
