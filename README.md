@@ -12,7 +12,7 @@
 Desenvolver uma plataforma web voltada ao ensino á distância para a gestão e oferta de conhecimento, dando suporte ás mais diversas arquiteturas de aprendizagem, alinhado com os objetivos estrtégicos a serem alcançados por cada organização que atendemos como clientes. De forma simples e intuitiva o LMS - Learning Management System, deve funcionar via web, com acesso via computador, tablet ou celular (pelo navegador ou aplicativo), sem a necessidade de instaçaão de qualquer plug-in. A plataforma web deve aceitar a publicação de arquivos scorm, mp4, mp3, pdf, jpeg e png. Seu layout deve ser de fácil personalização , possuindo templates pré definidos, trazendo autonomia para gestão da plataforma.
 
 # Integrantes do Grupo
-- [Vitor Yuri Santos](https://guthub.com/Vitor-y) - Scrum Master 
+- [Vitor Yuri Santos](https://github.com/Vitor-y) - Scrum Master 
 - [Francisco Cardoso](https://github.com/fCardosoNeto) - Product Owner
 - [Bruno Alexande Freire](https://github.com/brunofreire2001) - DEV Team
 - [Levi Motta](https://github.com/levizoca) - DEV Team
