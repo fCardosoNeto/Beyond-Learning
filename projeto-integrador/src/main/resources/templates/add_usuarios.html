@@ -13,9 +13,9 @@
 <body>
 	
 	<div class="container">
-		<h1>Sistema de Gerenciamento de Usuarios</h1>
+		<h1>Usuario Management System</h1>
 		<hr>
-		<h2>Adicionar usuário</h2>
+		<h2>Update</h2>
 
 		<form action="#" th:action="@{/saveUsuarios}" th:object="${user}"
 			method="POST">
@@ -25,6 +25,7 @@
 			
 			<input type="text"
 				th:field="*{email}" placeholder="email"
+				
 				class="form-control mb-4 col-5"> <input type="text"
 				th:field="*{password}" placeholder="senha"
 				class="form-control mb-4 col-5"> <input type="text"
@@ -40,11 +41,11 @@
 				class="form-control mb-4 col-5">
 
 			<button type="submit" class="btn btn-info col-2">Salvar Dados</button>
+			<a th:href = "@{/users}" class = "btn btn-info col-2"> Voltar</a>
 		</form>
 		
 		<hr>
 		
-		<a th:href="@{/users}"> Voltar </a>
 		
 	</div>
 	

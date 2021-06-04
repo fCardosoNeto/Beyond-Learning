@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta charset="ISO-8859-1">
+	<meta charset="UTF-8">
 	<title>List Users</title>
 	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
 	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
@@ -10,40 +10,42 @@
 <body>
 <div class="container text-center">
 	<div>
-		<p>
-			Bem-vindo <b>[[${#request.userPrincipal.principal.fullName}]]</b>
-		</p>
-		<a th:href = "@{/showNewUsuariosForm}" class = "btn btn-primary btn-sm mb-3"> Adicionar Usuario </a>
-		<a th:href = "@{/}" class = "btn btn-primary btn-sm mb-3"> Voltar </a>
-		<a th:href = "@{/logout}" class = "btn btn-primary btn-sm mb-3"> Fazer logout </a>
+		<form th:action="@{/logout}" method="post">
+			<p>
+				Bem Vindo <b>[[${#request.userPrincipal.principal.fullName}]]</b>
+			</p>
+			<a th:href = "@{/showNewUsuariosForm}" class = "btn btn-primary btn-sm mb-3"> Adicionar Usuario </a>
+			<input type="submit" class = "btn btn-primary btn-sm mb-3" value="Sair" />
+			<a th:href = "@{/}" class = "btn btn-primary btn-sm mb-3"> Voltar</a>
+		</form>
 	</div>
 	<div>
-		<h1>Lista de Usuarios</h1>
+		<h1>Lista de Usuários</h1>
 	</div>
 	
 	<div>
 		<table class="table table-striped table-bordered">
 			<thead class="thead-dark">
 				<tr>
-					<th>ID</th>
+					<th>ID do Usuário</th>
 					<th>E-mail</th>
 					<th>Primeiro Nome</th>
 					<th>Sobrenome</th>
 					<th>CPF</th>
 					<th>Telefone</th>
-					<th>Procedimentos</th>
+					<th>Ações</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr th:each="user: ${listUsers}">
-					<td th:text="${user.id}">User ID</td>
+					<td th:text="${user.id}">ID do Usuário</td>
 					<td th:text="${user.email}">E-mail</td>
-					<td th:text="${user.firstName}">First Name</td>
-					<td th:text="${user.lastName}">Last Name</td>
+					<td th:text="${user.firstName}">Primeiro Nome</td>
+					<td th:text="${user.lastName}">Sobrenome</td>
 					<td th:text="${user.cpf}">CPF</td>
 					<td th:text="${user.telefone}">Telefone</td>
 					<td><a th:href="@{/showFormForUpdate/{id}(id=${user.id})}" class="btn btn-primary">Atualizar</a>
-						<a th:href="@{/deleteUsuarios/{id}(id=${user.id})}" class="btn btn-danger">Apagar</a></td>
+						<a th:href="@{/deleteUsuarios/{id}(id=${user.id})}" class="btn btn-danger">Deletar</a></td>
 				</tr>
 			</tbody>
 		</table>

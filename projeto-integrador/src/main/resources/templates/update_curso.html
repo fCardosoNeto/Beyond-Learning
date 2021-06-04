@@ -2,7 +2,7 @@
 <html lang="pt" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Usuario Management System</title>
+<title>Gestão de Cursos e Pilulas</title>
 
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -13,9 +13,9 @@
 <body>
 	
 	<div class="container">
-		<h1>Curso Management System</h1>
+		<h1>Atualizar Dados do Curso</h1>
 		<hr>
-		<h2>Update</h2>
+		<h2>Atualizar</h2>
 
 		<form action="#" th:action="@{/saveCurso}" th:object="${curso}"
 			method="POST">
@@ -33,11 +33,11 @@
 
 
 			<button type="submit" class="btn btn-info col-2">Salvar Dados</button>
+			<a th:href = "@{/cursos}" class = "btn btn-info col-2"> Voltar</a>
 		</form>
 		
 		<hr>
 		
-		<a th:href="@{/cursos}"> Voltar </a>
 		
 	</div>
 	

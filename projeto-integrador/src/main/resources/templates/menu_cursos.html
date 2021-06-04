@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
-	<title>Catálogo de Cursos</title>
+	<title>Catálogo</title>
 	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
 	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
@@ -10,11 +10,14 @@
 <body>
 <div class="container text-center">
 	<div>
-		<a th:href = "@{/}" class = "btn btn-primary btn-sm mb-3"> Voltar </a>
-		<a th:href = "@{/logout}" class = "btn btn-primary btn-sm mb-3"> Fazer logout </a>
+		<form th:action="@{/logout}" method="post">
+
+			<a th:href = "@{/}" class = "btn btn-primary btn-sm mb-3"> Voltar</a>
+			<input type="submit" class = "btn btn-primary btn-sm mb-3" value="Sair" />
+		</form>
 	</div>
 	<div>
-		<h1>Catálogo de Cursos</h1>
+		<h1>Catálogo de Cursos & Pílulas</h1>
 	</div>
 	
 	<div>
