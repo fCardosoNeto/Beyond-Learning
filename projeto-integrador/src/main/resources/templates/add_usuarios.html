@@ -1,53 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt" xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Usuario Management System</title>
-
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	crossorigin="anonymous">
-
+		<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Add user - Beyond Learning</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link th:href="@{/css/styles.css}" rel="stylesheet" />
+        <link rel="stylesheet" th:href="@{/css/style2.css}">
+        <script src="https://kit.fontawesome.com/a076d05399.js"> </script>
+		<link rel="stylesheet" type="text/css"
+	href="/webjars/bootstrap/css/bootstrap.min.css" />
+	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+	
 </head>
 <body>
-	
-	<div class="container">
-		<h1>Usuario Management System</h1>
+
+<input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <div class="sidebar">
+            <header>Bem Vindo <b>[[${#request.userPrincipal.principal.fullName}]]</b></header>
+            <a th:href = "@{/showNewUsuariosForm}">
+                <i class="fas fa-user-alt"></i>
+                <span>Add User</span>  
+            </a>
+            <a th:href="@{/users}">
+                <i class="fas fa-stream"></i>
+                <span>Visão Geral</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-calendar"></i>
+                <span>Eventos</span>
+            </a>
+            <a th:href = "@{/}">
+                <i class="fas fa-sign-out-alt"></i>
+                <span >Sair</span>
+            </a>
+        </div>
+<header class="masthead">
+	<div class="container text-center">
+		<h2 class="text-white">Adicionar usuários</h2>
 		<hr>
-		<h2>Update</h2>
-
-		<form action="#" th:action="@{/saveUsuarios}" th:object="${user}"
-			method="POST">
-			
-			<!-- Adiciona um campo invisível pra lidar com o update -->
-			<input type = "hidden" th:field="*{id}" />
-			
-			<input type="text"
-				th:field="*{email}" placeholder="email"
-				
-				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{password}" placeholder="senha"
-				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{firstName}" placeholder="nome"
-				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{lastName}" placeholder="sobrenome"
-				class="form-control mb-4 col-5">
-			<input type="text"
-				th:field="*{cpf}" placeholder="CPF"
-				class="form-control mb-4 col-5">
-			<input type="text"
-				th:field="*{telefone}" placeholder="telefone"
-				class="form-control mb-4 col-5">
-
-			<button type="submit" class="btn btn-info col-2">Salvar Dados</button>
-			<a th:href = "@{/users}" class = "btn btn-info col-2"> Voltar</a>
-		</form>
 		
-		<hr>
+
+			<form th:action="@{/saveUsuarios}" th:object="${user}"
+			method="post" style="max-width: 600px; margin: 0 auto;">
+			<div class="m-3">
+				<div class="form-group row">
+					
+					<div class="col-12">
+						<input type="email" th:field="*{email}" placeholder="Email"
+							class="form-control" required />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					
+					<div class="col-12">
+						<input type="password" th:field="*{password}" placeholder="Senha"
+							class="form-control" required minlength="6" maxlength="10" />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					
+					<div class="col-12">
+						<input type="text" th:field="*{firstName}"
+							placeholder="Primeiro nome" class="form-control" required
+							minlength="2" maxlength="20" />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					
+					<div class="col-12">
+						<input type="text" th:field="*{lastName}"
+							placeholder="Ultimo nome" class="form-control" required
+							minlength="4" maxlength="20" />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					
+					<div class="col-12">
+						<input type="text" th:field="*{cpf}" placeholder="CPF"
+							class="form-control" required minlength="11" maxlength="15" />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					
+					<div class="col-12">
+						<input type="text" th:field="*{telefone}" placeholder="Telefone"
+							class="form-control" required minlength="10" maxlength="20" />
+					</div>
+				</div>
+				<button type="submit" class="btn btn-info col-4" style="background-color:#87ceeb;">Salvar dados</button>
+			
+			</div>
+			</form>
+
+			<hr>
 		
 		
 	</div>
-	
+</header>
+<footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Beyond Learning</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script th:src="@{/js/scripts.js}"></script>
 </body>
+
 </html>

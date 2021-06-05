@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="row border rounded m-3 p-3">
+            <th:block th:each="doc : ${listDocs}">  <!-- para mostrar os aquivos na tela --> 
+                <div class="col"> 
+                    <div>
+                        <img th:src="@{/images/icone-documentos.png}" width="50"/>
+                    </div>
+                    <div>
+                        <a th:href="@{'/download?id=' +${doc.id}}">[[${doc.name}]]</a> <!-- informações do nome, tamanho, icon -->
+                    </div>
+                    <div>
+                        ([[${#numbers.formatInteger(doc.size, 4, 'COMMA')}]] bytes)
+                    </div>
+                </div>
+            </th:block>
+        </div>
+</body>
+</html>

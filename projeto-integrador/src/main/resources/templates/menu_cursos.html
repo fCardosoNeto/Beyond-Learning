@@ -1,32 +1,64 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta charset="UTF-8">
-	<title>Catálogo</title>
-	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+	<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title> List curso - Beyond Learning</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link th:href="@{/css/styles.css}" rel="stylesheet" />
+        <link rel="stylesheet" th:href="@{/css/style2.css}">
+        <script src="https://kit.fontawesome.com/a076d05399.js"> </script>
+		<link rel="stylesheet" type="text/css"
+	href="/webjars/bootstrap/css/bootstrap.min.css" />
 	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
+<input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <div class="sidebar">
+            <header> <h3>Bem Vindo </h3> <b>[[${#request.userPrincipal.principal.fullName}]]</b></header>
+            <a th:href="@{/menu_cursos}">
+                <i class="fas fa-stream"></i>
+                <span>Visão Geral</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-calendar"></i>
+                <span>Eventos</span>
+            </a>
+            <a th:href = "@{/}">
+                <i class="fas fa-sign-out-alt"></i>
+                <span >Sair</span>
+            </a>
+        </div>
+<header class="masthead">
 <div class="container text-center">
 	<div>
-		<form th:action="@{/logout}" method="post">
-
-			<a th:href = "@{/}" class = "btn btn-primary btn-sm mb-3"> Voltar</a>
-			<input type="submit" class = "btn btn-primary btn-sm mb-3" value="Sair" />
-		</form>
-	</div>
-	<div>
-		<h1>Catálogo de Cursos & Pílulas</h1>
+		<h1 class="text-white">Catálogo de Cursos & Pílulas</h1>
 	</div>
 	
 	<div>
-		<table class="table table-striped table-bordered">
+		<table class="table table-striped" style="background-color: white; border-radius:20px; border:none;">
 			<thead class="thead-dark">
 				<tr>
 					<th>Categoria</th>
 					<th>Descrição</th>
 					<th>Nome</th>
+					<th>Visualizar</th>
 					</tr>
 			</thead>
 			<tbody>
@@ -34,10 +66,21 @@
 					<td th:text="${curso.categoria}">Categoria</td>
 					<td th:text="${curso.descricao}">Descrição</td>
 					<td th:text="${curso.nomecurso}">Nome do Curso</td>
+					<td><a th:href="@{/teste}" class="btn btn-primary">Visualizar Info</a>
 				</tr>
 			</tbody>
 		</table>
 	</div>
 </div>
+</header>
+<footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Beyond Learning</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script th:src="@{/js/scripts.js}"></script>
 </body>
 </html>

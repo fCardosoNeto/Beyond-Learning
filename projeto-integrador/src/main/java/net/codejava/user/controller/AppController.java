@@ -71,7 +71,7 @@ public class AppController {
 	public String saveUsuarios(@ModelAttribute("usuarios") User usuarios) {
 		// salva o usuario no banco
 		usuariosService.save(usuarios);
-		return "index";
+		return "redirect:/users";
 	}
 	
 	
@@ -91,7 +91,7 @@ public class AppController {
 
 		// chama o método de deletar usuário
 		this.usuariosService.deleteById(id);
-		return "index";
+		return "redirect:/users";
 
 	}
 

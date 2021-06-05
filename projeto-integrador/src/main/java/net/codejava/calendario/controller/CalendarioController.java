@@ -3,11 +3,14 @@ package net.codejava.calendario.controller;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
+
+import net.codejava.curso.entities.Curso;
 import net.codejava.evento.controller.Event;
 import net.codejava.evento.repository.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
@@ -60,7 +63,7 @@ public class CalendarioController {
 
         return e;
     }
-
+ 
     @PostMapping("/api/events/setColor")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @Transactional
