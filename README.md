@@ -4,8 +4,8 @@
 
 # Índice
 - [Objetivo](#objetivo)  
-- [Integrantes do Grupo](#integrantes-do-projeto)  
-- [Cronograma de Entrega](#cronograma-de-entrega)
+- [Integrantes do Grupo](#integrantes-do-grupo)  
+- [Cronograma de Entrega](#cronograma-de-entregas)
 - [Sprint Cards](#sprint-cards)
 
 # Objetivo
