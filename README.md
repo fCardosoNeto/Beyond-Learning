@@ -26,7 +26,7 @@ Desenvolver uma plataforma web voltada ao ensino á distância para a gestão e 
 | 28/03 | [Sprint 1](https://github.com/fCardosoNeto/Beyond-Learning/tree/Sprint-1) |
 | 18/04 | [Sprint 2](https://github.com/fCardosoNeto/Beyond-Learning/tree/Sprint-2) |
 | 16/05 | [Sprint 3](https://github.com/fCardosoNeto/Beyond-Learning/tree/Sprint-3) |
-| 05/06 | [Sprint 4](https://github.com/fCardosoNeto/Beyond-Learning/tree/Sprint-4) |
+| 06/06 | [Sprint 4](https://github.com/fCardosoNeto/Beyond-Learning/tree/Sprint-4) |
 
 # Sprint Cards
 
