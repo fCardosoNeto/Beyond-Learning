@@ -4,8 +4,8 @@
 
 # Índice
 - [Objetivo](#objetivo)  
-- [Integrantes do Grupo](#integrantes-do-projeto)  
-- [Cronograma de Entrega](#cronograma-de-entrega)
+- [Integrantes do Grupo](#integrantes-do-grupo)  
+- [Cronograma de Entrega](#cronograma-de-entregas)
 - [Sprint Cards](#sprint-cards)
 
 # Objetivo
@@ -26,9 +26,9 @@ Desenvolver uma plataforma web voltada ao ensino á distância para a gestão e 
 | 28/03 | [Sprint 1](https://github.com/fCardosoNeto/Beyond-Learning/tree/Sprint-1) |
 | 18/04 | [Sprint 2](https://github.com/fCardosoNeto/Beyond-Learning/tree/Sprint-2) |
 | 16/05 | [Sprint 3](https://github.com/fCardosoNeto/Beyond-Learning/tree/Sprint-3) |
-| 05/06 | [Sprint 4](https://github.com/fCardosoNeto/Beyond-Learning/tree/Sprint-4) |
+| 06/06 | [Sprint 4](https://github.com/fCardosoNeto/Beyond-Learning/tree/Sprint-4) |
 
 # Sprint Cards
 
 <p align="center">
-  <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Card/Cards_API.png" width="100%"p>
+  <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/card/Cards_Sprint.jpg" width="100%"p>
