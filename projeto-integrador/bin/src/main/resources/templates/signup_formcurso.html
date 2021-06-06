@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Registrar Curso</title>
+<link rel="stylesheet" type="text/css"
+	href="/webjars/bootstrap/css/bootstrap.min.css" />
+<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+<script type="text/javascript"
+	src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container text-center">
+		<div>
+			<h1>Registro de Cursos</h1>
+		</div>
+		<form th:action="@{/registercurso}" th:object="${curso}"
+			method="POST" style="max-width: 600px; margin: 0 auto;">
+			<div class="m-3">
+				<div class="form-group row">
+					<label class="col-4 col-form-label">Categoria: </label>
+					<div class="col-8">
+						<input type="text" th:field="*{categoria}" class="form-control"
+							required />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-4 col-form-label">Descrição: </label>
+					<div class="col-8">
+						<input type="text" th:field="*{descricao}" class="form-control"
+							 />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-4 col-form-label">Nome do Curso: </label>
+					<div class="col-8">
+						<input type="text" th:field="*{nomecurso}" class="form-control"
+							required minlength="4" maxlength="40" />
+					</div>
+				</div>
+
+				<div>
+					<button type="submit" class="btn btn-primary">Registrar</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

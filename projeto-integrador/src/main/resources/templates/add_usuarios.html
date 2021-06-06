@@ -13,11 +13,11 @@
 <body>
 	
 	<div class="container">
-		<h1>Usuario Management System</h1>
+		<h1>Sistema de Gerenciamento de Usuarios</h1>
 		<hr>
-		<h2>Update</h2>
+		<h2>Adicionar usuário</h2>
 
-		<form action="#" th:action="@{/saveUsuarios}" th:object="${usuarios}"
+		<form action="#" th:action="@{/saveUsuarios}" th:object="${user}"
 			method="POST">
 			
 			<!-- Adiciona um campo invisível pra lidar com o update -->
@@ -44,7 +44,7 @@
 		
 		<hr>
 		
-		<a th:href="@{/users}"> Back </a>
+		<a th:href="@{/users}"> Voltar </a>
 		
 	</div>
 	

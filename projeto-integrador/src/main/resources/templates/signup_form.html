@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+		<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Sing Up - Beyond Learning</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link th:href="@{/css/styles.css}" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css"
+	href="/webjars/bootstrap/css/bootstrap.min.css" />
+	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+	
+</head>
+ <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" th:href="@{/}">Beyond Learning</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" th:href="@{/login}">Sing In</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+	<header class="masthead">
+	<div class="container text-center">
+		<div>
+			<h1 class="text-white">Sing up</h1>
+		</div>
+		<form th:action="@{/process_register}" th:object="${user}"
+			method="post" style="max-width: 600px; margin: 0 auto;">
+			<div class="m-3">
+				<div class="form-group row">
+					<label class="col-1 text-white">Email: </label>
+					<div class="col-12">
+						<input type="email" th:field="*{email}" placeholder="Email"
+							class="form-control" required />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-1 text-white">Senha: </label>
+					<div class="col-12">
+						<input type="password" th:field="*{password}" placeholder="Senha"
+							class="form-control" required minlength="6" maxlength="10" />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-1 text-white">Nome: </label>
+					<div class="col-12">
+						<input type="text" th:field="*{firstName}"
+							placeholder="Primeiro nome" class="form-control" required
+							minlength="2" maxlength="20" />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-2 text-white">Sobrenome: </label>
+					<div class="col-12">
+						<input type="text" th:field="*{lastName}"
+							placeholder="Ultimo nome" class="form-control" required
+							minlength="4" maxlength="20" />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-1 text-white">CPF: </label>
+					<div class="col-12">
+						<input type="text" th:field="*{cpf}" placeholder="CPF"
+							class="form-control" required minlength="11" maxlength="15" />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-2 text-white">Telefone: </label>
+					<div class="col-12">
+						<input type="text" th:field="*{telefone}" placeholder="Telefone"
+							class="form-control" required minlength="10" maxlength="20" />
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary btn-xl" style="background-color:#87ceeb; border: none;">Registrar</button>
+			</div>
+			</form>
+	</div>
+	</header>
+	<!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Beyond Learning</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script th:src="@{/js/scripts.js}"></script>
+</body>
+</html>
