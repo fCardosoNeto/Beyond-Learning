@@ -23,7 +23,6 @@ Desenvolver uma plataforma web voltada ao ensino á distância para a gestão e 
 - [Levi Motta](https://github.com/levizoca) - DEV Team
 - [Raul Iglesias](https://github.com/RaulIglesias) - DEV Team
 
-
 # Cronograma de Entregas
 
 | Data | Link |
@@ -34,7 +33,7 @@ Desenvolver uma plataforma web voltada ao ensino á distância para a gestão e 
 | 06/06 | [Sprint 4](https://github.com/fCardosoNeto/Beyond-Learning/tree/Sprint-4) |
 
 # Backlog e User Stories 
-- [Backlog + User Stories](https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Backlog.pdf) - para visualizar as user stories é necessário descer um pouco a página quando acessar
+- [Backlog + User Stories](https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Backlog.pdf) - para visualizar as user stories é necessário descer um pouco a página quando acessar 
   
 # Sprint Cards
 
