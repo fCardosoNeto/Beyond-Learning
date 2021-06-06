@@ -1,5 +1,7 @@
 # Apuração de Tarefas dos Integrantes do Grupo e seus respectivos deveres
 
+- [Trello](https://trello.com/b/eJMoBzKm/grupo-api)
+
 ## Front End 
 Participantes: Raul, Bruno e Vitor
 
