@@ -4,6 +4,7 @@
 
 # Índice
 - [Objetivo](#objetivo)  
+- [Tecnologias Utilizadas](#tecnologia-utilizadas)
 - [Integrantes do Grupo](#integrantes-do-grupo)  
 - [Cronograma de Entrega](#cronograma-de-entregas)
 - [Sprint Cards](#sprint-cards)
@@ -11,6 +12,10 @@
 # Objetivo
 Desenvolver uma plataforma web voltada ao ensino á distância para a gestão e oferta de conhecimento, dando suporte ás mais diversas arquiteturas de aprendizagem, alinhado com os objetivos estrtégicos a serem alcançados por cada organização que atendemos como clientes. De forma simples e intuitiva o LMS - Learning Management System, deve funcionar via web, com acesso via computador, tablet ou celular (pelo navegador ou aplicativo), sem a necessidade de instaçaão de qualquer plug-in. A plataforma web deve aceitar a publicação de arquivos scorm, mp4, mp3, pdf, jpeg e png. Seu layout deve ser de fácil personalização , possuindo templates pré definidos, trazendo autonomia para gestão da plataforma.
 
+# Tecnologia Utilizadas  
+<p align="center">
+  <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Tecnologias_Utilizadas.jpg" width="350px" height="350px"p>
+  
 # Integrantes do Grupo
 - [Vitor Yuri Santos](https://github.com/Vitor-y) - Scrum Master 
 - [Francisco Cardoso](https://github.com/fCardosoNeto) - Product Owner
