@@ -22,7 +22,7 @@ Não há wireframes pois, foram feitas mudanças de tecnologia, conforme o andam
 
 # Modelo do Banco de Dados
 <p align="center">
-  <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Modelo_BD/Modelo_BD_Sprint_02.jpg" width="100%" p>  
+  <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Modelo_BD/Modelo_BD_Sprint_02.jpg" width="50%" p>  
   
 # Gráfico Burndown
 <p align="center">
