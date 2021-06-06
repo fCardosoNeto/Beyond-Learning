@@ -2,17 +2,21 @@
   <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Beyond%20Learning%20logo.gif" width="350px" height="350px" p>
      
 # Índice
-- [Backlog e User Stories](#backlog-e-user-stories) 
+- [Backlog e User Stories](#backlog-e-user-stories)
+- [Figma](#prototipagem-figma)
 - [Sprint 3](#sprint-3)
   - [Index](#index)
   - [Auto-Cadastro](#auto-cadastro)
   - [Upload de Arquivos](#upload-de-arquivos)
 - [Wireframe](#wireframe) 
 - [Modelo do Banco](#modelo-do-banco-de-dados) 
-- [Gráfico Burndown](#gráfico-burndown)  
-
+- [Gráfico Burndown](#gráfico-burndown)   
+  
 # Backlog e User Stories  
 - [Backlog + User Stories](https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Backlog.pdf) - para visualizar as user stories é necessário descer um pouco a página quando acessar
+  
+# Prototipagem Figma
+- [Figma](https://www.figma.com/file/PTGhl0yVyE52SE01WKdXZZ/Mockup?node-id=0%3A1)   
   
 # Sprint 3 
 Adicionado uma área de Upload e Download de Arquivos, para o Gestor e Administrador, um sistema de autenticação no Login, para diferenciar os usuáriso cadastrados no sistema e criptografia da senha no banco de dados.
