@@ -8,7 +8,7 @@
 - [Gráfico Burndown](#gráfico-burndown)  
 
 # Backlog e User Stories  
-- [Backlog](https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Backlog.pdf)
+- [Backlog + User Stories](https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Backlog.pdf) - para visualizar as user stories é necessário descer um pouco a página quando acessar
   
 # Sprint 1 
 Entrega do protótipo do Menu principal e do Menu de Login    
