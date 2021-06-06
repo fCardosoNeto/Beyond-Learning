@@ -2,10 +2,14 @@
   <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Beyond%20Learning%20logo.gif" width="350px" height="350px" p>
      
 # Índice
+- [Backlog e User Stories](#backlog-e-user-stories) 
 - [Sprint 1](#sprint-1)
 - [Wireframe](#wireframe) 
 - [Gráfico Burndown](#gráfico-burndown)  
-       
+
+# Backlog e User Stories  
+- [Backlog](https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Backlog.pdf)
+  
 # Sprint 1 
 Entrega do protótipo do Menu principal e do Menu de Login    
        
