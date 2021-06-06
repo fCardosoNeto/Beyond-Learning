@@ -5,6 +5,8 @@
 - [Backlog e User Stories](#backlog-e-user-stories) 
 - [Sprint 4](#sprint-4)
   - [Crud de Cursos](#crud-de-cursos)
+  - [Repositório de Documentos e Catálogo de Cursos](#repositório-de-documentos-e-catálogo-de-cursos)
+  - [Calendário de Eventos](#calendário-de-eventos)
 - [Wireframe](#wireframe) 
 - [Modelo do Banco](#modelo-do-banco-de-dados) 
 - [Gráfico Burndown](#gráfico-burndown)  
