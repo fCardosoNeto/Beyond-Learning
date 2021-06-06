@@ -15,7 +15,7 @@ Entrega do protótipo do Menu principal e do Menu de Login
 # Wireframe
        
 <p align="center">
-  <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Wireframe/gif-login-aluno.gif" width="100% p>
+  <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Wireframe/gif-login-aluno.gif" width="100%" p>
 
 <p align="center">
-  <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Wireframe/gif-menu-aluno.gif" width="100% p>                  
+  <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Wireframe/gif-menu-aluno.gif" width="100%" p>                  
