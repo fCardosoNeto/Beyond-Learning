@@ -4,6 +4,9 @@
 # Índice
 - [Backlog e User Stories](#backlog-e-user-stories) 
 - [Sprint 3](#sprint-3)
+  - [Index](#index)
+  - [Auto-Cadastro](#auto-cadastro)
+  - [Upload de Arquivos](#upload-de-arquivos)
 - [Wireframe](#wireframe) 
 - [Modelo do Banco](#modelo-do-banco-de-dados) 
 - [Gráfico Burndown](#gráfico-burndown)  
@@ -18,8 +21,18 @@ Adicionado uma área de Upload e Download de Arquivos, para o Gestor e Administr
   <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/card/Card_Sprint_03.jpg" width="100%"p>       
 
 # Wireframe
+  
+## Index     
 <p align="center">
-  <img src="" width="100%"p>                   
+  <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Wireframe/Index.gif" width="800px"p> 
+  
+## Auto-Cadastro     
+<p align="center">
+  <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Wireframe/Auto%20Registro.gif" width="800px"p> 
+  
+## Upload de Arquivos    
+<p align="center">
+  <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Wireframe/Upload%20de%20Arquivos.gif" width="800px"p>     
 
 # Modelo do Banco de Dados
   
