@@ -14,7 +14,7 @@ Desenvolver uma plataforma web voltada ao ensino á distância para a gestão e 
 
 # Tecnologia Utilizadas  
 <p align="center">
-  <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Tecnologias_Utilizadas.jpg" width="350px" height="350px"p>
+  <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Tecnologias_Utilizadas.jpg" width="100%"p>
   
 # Integrantes do Grupo
 - [Vitor Yuri Santos](https://github.com/Vitor-y) - Scrum Master 
