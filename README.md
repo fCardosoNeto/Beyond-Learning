@@ -2,7 +2,8 @@
   <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Beyond%20Learning%20logo.gif" width="350px" height="350px" p>
      
 # Índice
-- [Backlog e User Stories](#backlog-e-user-stories) 
+- [Backlog e User Stories](#backlog-e-user-stories)
+- [Figma](#prototipagem-figma)  
 - [Sprint 4](#sprint-4)
   - [Crud de Cursos](#crud-de-cursos)
   - [Repositório de Documentos e Catálogo de Cursos](#repositório-de-documentos-e-catálogo-de-cursos)
@@ -13,6 +14,9 @@
 
 # Backlog e User Stories  
 - [Backlog + User Stories](https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Backlog.pdf) - para visualizar as user stories é necessário descer um pouco a página quando acessar
+  
+# Prototipagem Figma
+- [Figma](https://www.figma.com/file/PTGhl0yVyE52SE01WKdXZZ/Mockup?node-id=0%3A1)     
   
 # Sprint 4 
 Nova categoria de cursos adicionado (Pílulas), repositório de documentos para o Gestor e Tutor, acessarem seus arquivos. Catálogo de cursos para o aluno visualizar os cursos cadastrados no sistema. Calendário de eventos, onde 
