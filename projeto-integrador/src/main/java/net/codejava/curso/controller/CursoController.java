@@ -128,11 +128,11 @@ public class CursoController {
 	
 
     // mapeamento para mostrar os arquivos na tela teste 
-    @GetMapping("/teste")
+    @GetMapping("/arq_cursos")
     public String viewHomePage1(Model model) {
         List<Document> listDocs = repo.findAll(); // para mostrar os arquivos na tela
         model.addAttribute("listDocs", listDocs);
-        return "teste"; // direcionar para a pagina home 
+        return "arq_cursos"; // direcionar para a pagina home 
     }
 	
 

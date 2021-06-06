@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
 	<meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title> List curso - Beyond Learning</title>
+        <title> Upload - Beyond Learning</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap Icons-->
@@ -25,54 +25,24 @@
 	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-<input type="checkbox" id="check">
-        <label for="check">
-            <i class="fas fa-bars" id="btn"></i>
-            <i class="fas fa-times" id="cancel"></i>
-        </label>
-        <div class="sidebar">
-            <header> <h3>Bem Vindo </h3> <b>[[${#request.userPrincipal.principal.fullName}]]</b></header>
-            <a th:href="@{/menu_cursos}">
-                <i class="fas fa-stream"></i>
-                <span>Visão Geral</span>
-            </a>
-            <a href="#">
-                <i class="fas fa-calendar"></i>
-                <span>Eventos</span>
-            </a>
-            <a th:href = "@{/}">
-                <i class="fas fa-sign-out-alt"></i>
-                <span >Sair</span>
-            </a>
+<center>
+<div class="row border rounded m-3 p-3">
+            <th:block th:each="doc : ${listDocs}">  <!-- para mostrar os aquivos na tela --> 
+                <div class="col"> 
+                    <div>
+                      
+                    </div>
+                    <div>
+                        <a th:href="@{'/download?id=' +${doc.id}}">[[${doc.name}]]</a> <!-- informações do nome, tamanho, icon -->
+                    </div>
+                    <div>
+                        ([[${#numbers.formatInteger(doc.size, 4, 'COMMA')}]] bytes)
+                    </div>
+                </div>
+            </th:block>
         </div>
-<header class="masthead">
-<div class="container text-center">
-	<div>
-		<h1 class="text-white">Catálogo de Cursos & Pílulas</h1>
-	</div>
-	
-	<div>
-		<table class="table table-striped" style="background-color: white; border-radius:20px; border:none;">
-			<thead class="thead-dark">
-				<tr>
-					<th>Categoria</th>
-					<th>Descrição</th>
-					<th>Nome</th>
-					<th>Visualizar</th>
-					</tr>
-			</thead>
-			<tbody>
-				<tr th:each="curso: ${listCurso}">
-					<td th:text="${curso.categoria}">Categoria</td>
-					<td th:text="${curso.descricao}">Descrição</td>
-					<td th:text="${curso.nomecurso}">Nome do Curso</td>
-					<td><a th:href="@{/arq_cursos}" class="btn btn-primary">Info</a>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-</div>
-</header>
+ </center>
+</body>
 <footer class="bg-light py-5">
             <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Beyond Learning</div></div>
         </footer>
@@ -82,5 +52,4 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
         <script th:src="@{/js/scripts.js}"></script>
-</body>
 </html>
