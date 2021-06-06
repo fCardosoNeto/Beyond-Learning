@@ -7,7 +7,7 @@
 - [Wireframe](#wireframe)       
        
 # Sprint 1 
-Entrega do protótipo do Menu principal e do Menu de Login    
+## Entrega do protótipo do Menu principal e do Menu de Login    
        
 <p align="center">
   <img src="https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/card/Card_Sprint_01.jpg" width="100%"p>       
