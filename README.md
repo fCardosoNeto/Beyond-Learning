@@ -6,6 +6,7 @@
 - [Tecnologias Utilizadas](#tecnologia-utilizadas)
 - [Integrantes do Grupo](#integrantes-do-grupo)  
 - [Cronograma de Entrega](#cronograma-de-entregas)
+- [Backlog e User Stories](#backlog-e-user-stories)  
 - [Sprint Cards](#sprint-cards)
 
 # Objetivo
@@ -32,6 +33,9 @@ Desenvolver uma plataforma web voltada ao ensino á distância para a gestão e 
 | 16/05 | [Sprint 3](https://github.com/fCardosoNeto/Beyond-Learning/tree/Sprint-3) |
 | 06/06 | [Sprint 4](https://github.com/fCardosoNeto/Beyond-Learning/tree/Sprint-4) |
 
+# Backlog e User Stories 
+- [Backlog + User Stories](https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Backlog.pdf) - para visualizar as user stories é necessário descer um pouco a página quando acessar
+  
 # Sprint Cards
 
 <p align="center">
