@@ -3,8 +3,8 @@
 
        
 # Índice
-- [Sprint1](sprint-1)
-- [Wireframe](wireframe)       
+- [Sprint 1](#sprint-1)
+- [Wireframe](#wireframe)       
        
 # Sprint 1 
 Entrega do protótipo do Menu principal e do Menu de Login    
