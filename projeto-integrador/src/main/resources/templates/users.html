@@ -23,6 +23,24 @@
 	href="/webjars/bootstrap/css/bootstrap.min.css" />
 	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+	<style>
+		body {
+    		margin: 0;
+    		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    		font-size: 1rem;
+    		font-weight: 400;
+   		 	line-height: 1.5;
+   		 	color: #212529;
+    		text-align: left;
+    		background-color: #fff;
+    		margin-top: -24px;
+		}
+		
+		.h3, h3 {
+   			margin-top: 20px;
+    		font-size: 1.75rem;
+		}
+	</style>
 </head>
 <body>
 <input type="checkbox" id="check">
@@ -32,6 +50,10 @@
         </label>
         <div class="sidebar">
             <header><h3>Bem Vindo </h3><b>[[${#request.userPrincipal.principal.fullName}]]</b></header>
+            <a th:href = "@{/index}">
+                <i class="fas fa-home"></i>
+                <span >Home</span>
+            </a>
             <a th:href = "@{/showNewUsuariosForm}">
                 <i class="fas fa-user-alt"></i>
                 <span>Add User</span>  
