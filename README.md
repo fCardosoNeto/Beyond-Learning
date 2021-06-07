@@ -19,7 +19,7 @@ Desenvolver uma plataforma web voltada ao ensino á distância para a gestão e 
 # Integrantes do Grupo
 - [Vitor Yuri Santos](https://github.com/Vitor-y) - Scrum Master 
 - [Francisco Cardoso](https://github.com/fCardosoNeto) - Product Owner
-- [Bruno Alexande Freire](https://github.com/brunofreire2001) - DEV Team
+- [Bruno Alexande Freire](https://github.com/brunofreire2001) - Equipe DEV
 - [Levi Motta](https://github.com/levizoca) - DEV Team
 - [Raul Iglesias](https://github.com/RaulIglesias) - DEV Team
 
