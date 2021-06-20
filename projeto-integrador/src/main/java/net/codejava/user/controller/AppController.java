@@ -2,10 +2,10 @@ package net.codejava.user.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import net.codejava.user.entities.User;
 import net.codejava.user.repository.UserRepository;
-import net.codejava.user.service.UsuarioService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -29,9 +29,21 @@ public class AppController {
 		return "index";
 	}
 	
+	@GetMapping("/forgot_password")
+	public String viewPasswordPage() {
+		return "forgot_password";
+	}
+	
 	@GetMapping("/login")
 	public String viewLoginPage() {
 		return "login";
+	}
+	
+	// finaliza sessão
+	@GetMapping("/logout")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "index";
 	}
 
 	@GetMapping("/register")
