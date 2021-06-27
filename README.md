@@ -26,3 +26,15 @@ Francisco: User Stories, Backlog, Cards, Wireframes e Briefing
 Vitor: Suporte, Burndown
 
 Raul: Modelagem do banco de Dados
+
+# Save card 
+
+## Front End 
+Participantes: Vitor, Francisco
+
+Vitor e Francisco: criação da tela menu para o aluno, alterações no design e criação do calendário
+
+## Back End
+Participantes: Vitor
+
+Vitor: interação com o e-mail
