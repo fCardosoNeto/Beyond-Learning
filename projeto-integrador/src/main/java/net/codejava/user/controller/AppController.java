@@ -29,11 +29,6 @@ public class AppController {
 		return "index";
 	}
 	
-	@GetMapping("/forgot_password")
-	public String viewPasswordPage() {
-		return "forgot_password";
-	}
-	
 	@GetMapping("/login")
 	public String viewLoginPage() {
 		return "login";
@@ -105,6 +100,15 @@ public class AppController {
 		this.usuariosService.deleteById(id);
 		return "redirect:/users";
 
+	} 
+	@GetMapping("/calendar")
+	public String viewCalendarPage() {
+		return "calendar";
+	}
+	
+	@GetMapping("/menu_aluno")
+	public String viewMenuPage() {
+		return "menu_aluno";
 	}
 
 }

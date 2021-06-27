@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title> Events Calendar - Beyond Learning</title>
+<link th:href="@{/css/style_calendar.css}" rel="stylesheet" />
+<link th:href="@{/css/style_calendar.css}" rel="stylesheet" /> 
+<link th:href="@{/css/style2.css}" rel="stylesheet" /> 
+<script src="https://kit.fontawesome.com/a076d05399.js"> </script>     
+</head> 
+<body>
+<div class="wrapper">
+  <main>
+    <div class="toolbar">
+      <div class="toggle">
+        <div class="toggle__option">week</div>
+        <div class="toggle__option toggle__option--selected">month</div>
+      </div>
+      <div class="current-month">June 2016</div>
+      <div class="search-input">
+        <input type="text" value="What are you looking for?">
+        <i class="fa fa-search"></i>
+      </div>
+    </div>
+    <div class="calendar">
+      <div class="calendar__header">
+        <div>mon</div>
+        <div>tue</div>
+        <div>wed</div>
+        <div>thu</div>
+        <div>fri</div>
+        <div>sat</div>
+        <div>sun</div>
+      </div>
+      <div class="calendar__week">
+        <div class="calendar__day day">1</div>
+        <div class="calendar__day day">2</div>
+        <div class="calendar__day day">3</div>
+        <div class="calendar__day day">4</div>
+        <div class="calendar__day day">5</div>
+        <div class="calendar__day day">6</div>
+        <div class="calendar__day day">7</div>
+      </div>
+      <div class="calendar__week">
+        <div class="calendar__day day">8</div>
+        <div class="calendar__day day">9</div>
+        <div class="calendar__day day">10</div>
+        <div class="calendar__day day">11</div>
+        <div class="calendar__day day">12</div>
+        <div class="calendar__day day">13</div>
+        <div class="calendar__day day">14</div>        
+      </div>
+      <div class="calendar__week">
+        <div class="calendar__day day">15</div>
+        <div class="calendar__day day">16</div>
+        <div class="calendar__day day">17</div>
+        <div class="calendar__day day">18</div>
+        <div class="calendar__day day">19</div>
+        <div class="calendar__day day">20</div>
+        <div class="calendar__day day">21</div>    
+      </div>
+      <div class="calendar__week">
+        <div class="calendar__day day">22</div>
+        <div class="calendar__day day">23</div>
+        <div class="calendar__day day">24</div>
+        <div class="calendar__day day">25</div>
+        <div class="calendar__day day">26</div> 
+        <div class="calendar__day day">27</div> 
+        <div class="calendar__day day">28</div> 
+      </div>
+      <div class="calendar__week">
+        <div class="calendar__day day">29</div>
+        <div class="calendar__day day">30</div>
+        <div class="calendar__day day">31</div>
+        <div class="calendar__day day">1</div>
+        <div class="calendar__day day">2</div>
+        <div class="calendar__day day">3</div>
+        <div class="calendar__day day">4</div>
+      </div>
+    </div>
+  </main>
+  <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <div class="sidebar">
+            <header><h3>Welcome</h3><b>[[${#request.userPrincipal.principal.fullName}]]</b></header>
+            <a th:href = "@{/showNewUsuariosForm}">
+                <i class="fas fa-user-alt"></i>
+                <span>Add User</span>  
+            </a>
+            <a th:href="@{/users}">
+                <i class="fas fa-stream"></i>
+                <span>User List</span>
+            </a>
+           <a th:href = "@{/showNewCursoForm}">
+                <i class="far fa-plus-square"></i>
+                <span>Add Course</span>  
+            </a>
+            <a th:href = "@{/cursos}">
+                <i class="fas fa-stream"></i>
+                <span>Course List</span>
+            </a>
+            <a th:href = "@{/menu_cursos}">
+                <i class="fas fa-book-open"></i>
+                <span>Course Catalog</span>
+            </a>
+            <a th:href = "@{/upload}">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <span>Upload</span>
+            </a>
+            <a th:href="@{/calendar}">
+                <i class="fas fa-calendar"></i>
+                <span>Calendar</span>
+            </a>
+            <a th:href = "@{/}">
+                <i class="fas fa-sign-out-alt"></i>
+                <span >Leave</span>
+            </a>
+        </div>
+</div>
+</body>
+</html>

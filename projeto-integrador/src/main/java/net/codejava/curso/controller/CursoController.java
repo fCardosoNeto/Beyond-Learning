@@ -33,13 +33,6 @@ public class CursoController {
 	@Autowired
 	private CursoRepository cursoRepository;
 
-	@PostMapping("/registercurso")
-	public String showCursoForm(Model model) {
-		model.addAttribute("curso", new Curso());
-		
-		return "signup_formcurso";
-	}
-
 	@GetMapping("/cursos")
 	public String listCurso(Model model) {
 		List<Curso> listCurso = cursoRepository.findAll();

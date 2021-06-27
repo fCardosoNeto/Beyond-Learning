@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> 
+<html xmlns:th="https://www.thymeleaf.org"> <!--mensagem de aviso-->
 <head>
 	<meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title> Upload - Beyond Learning</title>
+        <title> Material - Beyond Learning</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap Icons-->
@@ -23,26 +23,100 @@
 	href="/webjars/bootstrap/css/bootstrap.min.css" />
 	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+	<style>
+		body {
+    		margin: 0;
+    		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    		font-size: 1rem;
+    		font-weight: 400;
+   		 	line-height: 1.5;
+   		 	color: #212529;
+    		text-align: left;
+    		background-color: #fff;
+    		margin-top: -24px;
+		}
+		
+		.h3, h3 {
+   			margin-top: 20px;
+    		font-size: 1.75rem;
+		}
+	</style>
 </head>
 <body>
-<center>
-<div class="row border rounded m-3 p-3">
-            <th:block th:each="doc : ${listDocs}">  <!-- para mostrar os aquivos na tela --> 
-                <div class="col"> 
-                    <div>
-                      
-                    </div>
-                    <div>
-                        <a th:href="@{'/download?id=' +${doc.id}}">[[${doc.name}]]</a> <!-- informações do nome, tamanho, icon -->
-                    </div>
-                    <div>
-                        ([[${#numbers.formatInteger(doc.size, 4, 'COMMA')}]] bytes)
-                    </div>
-                </div>
-            </th:block>
+<input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <div class="sidebar">
+            <header><h3>Welcome</h3><b>[[${#request.userPrincipal.principal.fullName}]]</b></header>
+            <a th:href = "@{/showNewUsuariosForm}">
+                <i class="fas fa-user-alt"></i>
+                <span>Add User</span>  
+            </a>
+            <a th:href="@{/users}">
+                <i class="fas fa-stream"></i>
+                <span>User List</span>
+            </a>
+           <a th:href = "@{/showNewCursoForm}">
+                <i class="far fa-plus-square"></i>
+                <span>Add Course</span>  
+            </a>
+            <a th:href = "@{/cursos}">
+                <i class="fas fa-stream"></i>
+                <span>Course List</span>
+            </a>
+            <a th:href = "@{/menu_cursos}">
+                <i class="fas fa-book-open"></i>
+                <span>Course Catalog</span>
+            </a>
+            <a th:href = "@{/upload}">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <span>Upload</span>
+            </a>
+            <a th:href="@{/calendar}">
+                <i class="fas fa-calendar"></i>
+                <span>Calendar</span>
+            </a>
+            <a th:href = "@{/}">
+                <i class="fas fa-sign-out-alt"></i>
+                <span >Leave</span>
+            </a>
         </div>
- </center>
-</body>
+<body>
+<header class="masthead">
+					 <!-- ATUALIZAR O CSS PARA A VERSÃO MAIS RECENTE -->
+	<div class="container-fluid text-center"> <!-- para centralizar o texto -->
+		<div>
+			<h1>Class Material</h1><!--primeiro titulo que aparece(css)-->
+		</div>
+		
+		<div class="text-success"> <!-- para formatar a cor do texto -->
+			<h3> [[${message}]]</h3>	<!-- mensagem de aviso, puxa a variavel de aviso  -->
+		</div>
+		<center>
+		<div class="row border rounded m-3 p-3 text-center" style="width: 800px;">
+			<th:block th:each="doc : ${listDocs}">  <!-- para mostrar os aquivos na tela --> 
+				<div class="col"> 
+					<div>   
+						<img th:src="@{/images/icone-documentos.png}" width="50"/>
+					</div>
+					<div>
+						<a th:href="@{'/download?id=' +${doc.id}}">[[${doc.name}]]</a> <!-- informações do nome, tamanho, icon -->
+					</div>
+					<div>
+						([[${#numbers.formatInteger(doc.size, 4, 'COMMA')}]] bytes)
+					</div>
+				</div>
+			</th:block>
+		</div>
+		     </center>
+	<form th:action="@{/upload}" method="POST" 
+		enctype="multipart/form-data"
+		style="max-width: 600px; margin: 0 auto" 
+		>	<!-- especificar o tamanho da borda -->
+</header>
+
 <footer class="bg-light py-5">
             <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Beyond Learning</div></div>
         </footer>
@@ -52,4 +126,5 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
         <script th:src="@{/js/scripts.js}"></script>
+</body>
 </html>

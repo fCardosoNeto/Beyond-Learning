@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Sing Up - Beyond Learning</title>
+        <title>Sign Up - Beyond Learning</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap Icons-->
@@ -31,7 +31,7 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" th:href="@{/login}">Sing In</a></li>
+                        <li class="nav-item"><a class="nav-link" th:href="@{/login}">Sign In</a></li>
                     </ul>
                 </div>
             </div>
@@ -39,7 +39,7 @@
 	<header class="masthead">
 	<div class="container text-center">
 		<div>
-			<h1 class="text-white">Sing up</h1>
+			<h1 class="text-white">Sign up</h1>
 		</div>
 		<form th:action="@{/process_register}" th:object="${user}"
 			method="post" style="max-width: 600px; margin: 0 auto;">
@@ -47,33 +47,33 @@
 				<div class="form-group row">
 					<label class="col-1 text-white">Email: </label>
 					<div class="col-12">
-						<input type="email" th:field="*{email}" placeholder="Email"
+						<input type="email" th:field="*{email}" placeholder="E-mail"
 							class="form-control" required />
 					</div>
 				</div>
 
 				<div class="form-group row">
-					<label class="col-1 text-white">Senha: </label>
+					<label class="col-1 text-white">Password: </label>
 					<div class="col-12">
-						<input type="password" th:field="*{password}" placeholder="Senha"
+						<input type="password" th:field="*{password}" placeholder="Password"
 							class="form-control" required minlength="6" maxlength="10" />
 					</div>
 				</div>
 
 				<div class="form-group row">
-					<label class="col-1 text-white">Nome: </label>
+					<label class="col-1 text-white">Name: </label>
 					<div class="col-12">
 						<input type="text" th:field="*{firstName}"
-							placeholder="Primeiro nome" class="form-control" required
+							placeholder="First Name" class="form-control" required
 							minlength="2" maxlength="20" />
 					</div>
 				</div>
 
 				<div class="form-group row">
-					<label class="col-2 text-white">Sobrenome: </label>
+					<label class="col-2 text-white">Last Name: </label>
 					<div class="col-12">
 						<input type="text" th:field="*{lastName}"
-							placeholder="Ultimo nome" class="form-control" required
+							placeholder="Last name" class="form-control" required
 							minlength="4" maxlength="20" />
 					</div>
 				</div>
@@ -87,13 +87,13 @@
 				</div>
 
 				<div class="form-group row">
-					<label class="col-2 text-white">Telefone: </label>
+					<label class="col-2 text-white">Cellphone: </label>
 					<div class="col-12">
-						<input type="text" th:field="*{telefone}" placeholder="Telefone"
+						<input type="text" th:field="*{telefone}" placeholder="Telephone"
 							class="form-control" required minlength="10" maxlength="20" />
 					</div>
 				</div>
-				<button type="submit" class="btn btn-primary btn-xl" style="background-color:#87ceeb; border: none;">Registrar</button>
+				<button type="submit" class="btn btn-primary btn-xl" style="background-color:#87ceeb; border: none;">Register</button>
 			</div>
 			</form>
 	</div>
