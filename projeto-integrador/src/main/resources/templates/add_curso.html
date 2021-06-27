@@ -49,25 +49,29 @@
         </label>
         <div class="sidebar">
             <header><h3>Welcome</h3><b>[[${#request.userPrincipal.principal.fullName}]]</b></header>
+            <a th:href = "@{/index}">
+                <i class="fas fa-home"></i>
+                <span >Home</span>
+            </a>        
             <a th:href = "@{/showNewUsuariosForm}">
                 <i class="fas fa-user-alt"></i>
                 <span>Add User</span>  
             </a>
             <a th:href="@{/users}">
                 <i class="fas fa-stream"></i>
-                <span>User List</span>
+                <span>List Users</span>
             </a>
            <a th:href = "@{/showNewCursoForm}">
                 <i class="far fa-plus-square"></i>
-                <span>Add Course</span>  
+                <span>Add Courses</span>  
             </a>
             <a th:href = "@{/cursos}">
                 <i class="fas fa-stream"></i>
-                <span>Course List</span>
+                <span>List Courses</span>
             </a>
             <a th:href = "@{/menu_cursos}">
                 <i class="fas fa-book-open"></i>
-                <span>Course Catalog</span>
+                <span>Catalog</span>
             </a>
             <a th:href = "@{/upload}">
                 <i class="fas fa-cloud-upload-alt"></i>
@@ -77,9 +81,9 @@
                 <i class="fas fa-calendar"></i>
                 <span>Calendar</span>
             </a>
-            <a th:href = "@{/}">
+            <a th:href = "@{/logout}">
                 <i class="fas fa-sign-out-alt"></i>
-                <span >Leave</span>
+                <span >Logout</span>
             </a>
         </div>
 <body>
@@ -88,7 +92,7 @@
 
 	<div class="container text-center">
 	
-		<h2 class="text-white">Add Course</h2>
+		<h2 class="text-white">Adicionar Cursos</h2>
 		<hr>
 		
 	<center>
@@ -99,17 +103,17 @@
 			<input type = "hidden" th:field="*{id}" />
 			
 			<input type="text"
-				th:field="*{categoria}" placeholder="Course Category"
+				th:field="*{categoria}" placeholder="Categoria"
 				
 				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{descricao}" placeholder="Course Description"
+				th:field="*{descricao}" placeholder="Descrição"
 				
 				class="form-control mb-4 col-5"> <input type="text"
-				th:field="*{nomecurso}" placeholder="Course Name"
+				th:field="*{nomecurso}" placeholder="Nome"
 				class="form-control mb-4 col-5">
 
 
-			<button type="submit" class="btn btn-info col-2" style="background-color:#87ceeb; border:none; margin:5px;">Save Data</button>
+			<button type="submit" class="btn btn-info col-2" style="background-color:#87ceeb; border:none; margin:5px;">Salvar</button>
 		</form>	
 		<hr>
 		</center>		

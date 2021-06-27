@@ -50,25 +50,29 @@
         </label>
         <div class="sidebar">
             <header><h3>Welcome</h3><b>[[${#request.userPrincipal.principal.fullName}]]</b></header>
+            <a th:href = "@{/index}">
+                <i class="fas fa-home"></i>
+                <span >Home</span>
+            </a>        
             <a th:href = "@{/showNewUsuariosForm}">
                 <i class="fas fa-user-alt"></i>
                 <span>Add User</span>  
             </a>
             <a th:href="@{/users}">
                 <i class="fas fa-stream"></i>
-                <span>User List</span>
+                <span>List Users</span>
             </a>
            <a th:href = "@{/showNewCursoForm}">
                 <i class="far fa-plus-square"></i>
-                <span>Add Course</span>  
+                <span>Add Courses</span>  
             </a>
             <a th:href = "@{/cursos}">
                 <i class="fas fa-stream"></i>
-                <span>Course List</span>
+                <span>List Courses</span>
             </a>
             <a th:href = "@{/menu_cursos}">
                 <i class="fas fa-book-open"></i>
-                <span>Course Catalog</span>
+                <span>Catalog</span>
             </a>
             <a th:href = "@{/upload}">
                 <i class="fas fa-cloud-upload-alt"></i>
@@ -78,9 +82,9 @@
                 <i class="fas fa-calendar"></i>
                 <span>Calendar</span>
             </a>
-            <a th:href = "@{/}">
+            <a th:href = "@{/logout}">
                 <i class="fas fa-sign-out-alt"></i>
-                <span >Leave</span>
+                <span >Logout</span>
             </a>
         </div>
 <body>
