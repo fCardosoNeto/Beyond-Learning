@@ -30,7 +30,7 @@ Desenvolver uma plataforma web voltada ao ensino á distância para a gestão e 
 | 18/04 | [Sprint 2](https://github.com/fCardosoNeto/Beyond-Learning/tree/Sprint-2) |
 | 16/05 | [Sprint 3](https://github.com/fCardosoNeto/Beyond-Learning/tree/Sprint-3) |
 | 06/06 | [Sprint 4](https://github.com/fCardosoNeto/Beyond-Learning/tree/Sprint-4) |
-| 27/06 | [Save Card]() |
+| 27/06 | [Save Card](https://github.com/fCardosoNeto/Beyond-Learning/tree/Save-Card) |
 
 # Backlog e User Stories 
 - [Backlog + User Stories](https://github.com/fCardosoNeto/Beyond-Learning/blob/main/doc/Backlog.pdf) - para visualizar as user stories é necessário descer um pouco a página quando acessar 
