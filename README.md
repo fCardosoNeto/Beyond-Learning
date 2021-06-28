@@ -43,4 +43,4 @@ Levi: Ajustes e formatação das páginas
 ## Back End
 Participantes: Vitor
 
-Vitor: interação com o e-mail
+Vitor e Raul: interação com o e-mail
